@@ -1,5 +1,9 @@
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
-minimal_mistakes_skin: "default"
+minimal_mistakes_skin: "air"  # hoặc: air, aqua, contrast, dirt, mint, neon, plum, sunset
+# air	Sáng, thoáng, nhiều khoảng trắng — hợp portfolio dev
+# dark	Nền tối, chữ sáng — hợp blog technical
+# mint	Sáng, điểm nhấn xanh mint, hiện đại
+# contrast	Tương phản cao, rõ ràng, dễ đọc
 
 plugins:
   - jekyll-remote-theme
@@ -10,6 +14,19 @@ plugins:
 title: "ThaoNguyen"
 url: "https://thaonbt.github.io"
 
+breadcrumbs: true
+
 author:
   name: "ThaoNguyen"
   bio: "Full-stack dev | Fintech & Crypto enthusiast"
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/thaonbt"
+
+logo: /assets/images/favicon.png
+
+collections:
+  projects:
+    output: true
+    permalink: /:collection/:path/
