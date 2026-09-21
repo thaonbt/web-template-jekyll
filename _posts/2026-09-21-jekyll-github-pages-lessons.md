@@ -16,7 +16,7 @@ Setting up a Jekyll site on GitHub Pages sounds simple on paper — push a `_con
 
 ## Remote themes don't auto-load all their plugins
 
-When using `remote_theme` instead of installing a theme as a gem, GitHub Pages does **not** automatically require every plugin the theme depends on. Minimal Mistakes uses the `{% include_cached %}` Liquid tag from the `jekyll-include-cache` plugin, and without explicitly listing it under `plugins:` in `_config.yml`, the build fails with:
+When using `remote_theme` instead of installing a theme as a gem, GitHub Pages does **not** automatically require every plugin the theme depends on. Minimal Mistakes uses the {% raw %}`{% include_cached %}`{% endraw %} Liquid tag from the `jekyll-include-cache` plugin, and without explicitly listing it under `plugins:` in `_config.yml`, the build fails with:
 
 > Liquid syntax error (line 10): Unknown tag 'include_cached'
 
