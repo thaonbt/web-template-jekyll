@@ -21,7 +21,7 @@ breadcrumbs: true
 author:
   name: "Thao Nguyen"
   bio: "Full-stack dev | Fintech & Crypto enthusiast"
-  avatar: "/assets/images/avatar_Thao.JPG"
+  avatar: "/assets/images/avatar-Thao.JPG"
   home: "/about/"   # click vào avatar sẽ dẫn tới trang About
   links:
     - label: "GitHub"
