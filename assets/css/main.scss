@@ -45,16 +45,11 @@
 }
 
 /* Toggle chuyển đổi chế độ sáng/tối (Dark mode toggle) - tham khảo: https://codepen.io/aaroniker/pen/ExgJQqM */
-.masthead__inner-wrap {
-  position: relative; // đảm bảo làm điểm neo cho absolute bên dưới
-}
-
 #theme-toggle {
-  position: absolute;
-  top: 50%;
-  right: 1em;
-  transform: translateY(-50%);
-  margin-left: 0; // bỏ margin-left: auto cũ, không cần nữa
+  position: fixed;
+  top: 14px;
+  right: 16px;
+  z-index: 999; // đảm bảo luôn nổi trên mọi lớp khác của theme
 
   width: 52px;
   height: 26px;
@@ -66,6 +61,7 @@
   display: flex;
   align-items: center;
   transition: background-color 0.25s ease;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 
   &[aria-pressed="true"] {
     background-color: #444;
@@ -93,6 +89,13 @@
 
   &[aria-pressed="true"] .theme-toggle__thumb {
     transform: translateX(26px);
+  }
+}
+
+@media (max-width: 600px) {
+  #theme-toggle {
+    top: 10px;
+    right: 10px;
   }
 }
 

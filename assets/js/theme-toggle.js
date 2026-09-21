@@ -30,6 +30,6 @@
             localStorage.setItem('theme', next);
         });
 
-        masthead.appendChild(btn);
+        document.body.appendChild(btn); // gắn vào body, không phụ thuộc masthead
     });
 })();
