@@ -1,5 +1,5 @@
 remote_theme: "mmistakes/minimal-mistakes@4.26.2"
-minimal_mistakes_skin: "air"  # hoặc: air, aqua, contrast, dirt, mint, neon, plum, sunset
+minimal_mistakes_skin: "dirt"  # hoặc: air, aqua, contrast, dirt, mint, neon, plum, sunset
 # air	Sáng, thoáng, nhiều khoảng trắng — hợp portfolio dev
 # dark	Nền tối, chữ sáng — hợp blog technical
 # mint	Sáng, điểm nhấn xanh mint, hiện đại

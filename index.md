@@ -1,7 +1,7 @@
 ---
+title: "Portfolio - ThaoNguyen"
+excerpt: "A tech-oriented automation and web development"
 layout: splash
-title: "Hi, I'm ThaoNguyen"
-excerpt: "Full-stack dev exploring web, fintech, and crypto"
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
