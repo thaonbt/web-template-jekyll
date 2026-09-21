@@ -12,20 +12,22 @@
         var masthead = document.querySelector('.masthead__inner-wrap');
         if (!masthead) return;
 
+        var isDark = root.getAttribute('data-theme') === 'dark';
+
         var btn = document.createElement('button');
         btn.id = 'theme-toggle';
         btn.setAttribute('aria-label', 'Chuyển giao diện sáng/tối');
-
-        function updateLabel() {
-            btn.textContent = root.getAttribute('data-theme') === 'dark' ? '☀️' : '🌙';
-        }
-        updateLabel();
+        btn.setAttribute('aria-pressed', isDark);
+        btn.innerHTML =
+            '<span class="theme-toggle__icon theme-toggle__icon--sun">☀️</span>' +
+            '<span class="theme-toggle__thumb"></span>' +
+            '<span class="theme-toggle__icon theme-toggle__icon--moon">🌙</span>';
 
         btn.addEventListener('click', function () {
             var next = root.getAttribute('data-theme') === 'dark' ? 'light' : 'dark';
             root.setAttribute('data-theme', next);
+            btn.setAttribute('aria-pressed', next === 'dark');
             localStorage.setItem('theme', next);
-            updateLabel();
         });
 
         masthead.appendChild(btn);

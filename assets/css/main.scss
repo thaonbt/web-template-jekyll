@@ -23,7 +23,6 @@
 }
 
 /* Style khung "On this page" (TOC) */
-
 .toc {
   font-size: 0.85em;
   border: 1px solid $border-color;
@@ -45,39 +44,94 @@
   }
 }
 
+/* Toggle chuyển đổi chế độ sáng/tối (Dark mode toggle) - tham khảo: https://codepen.io/aaroniker/pen/ExgJQqM */
 #theme-toggle {
-  background: none;
+  position: relative;
+  width: 52px;
+  height: 26px;
+  border-radius: 999px;
   border: 1px solid $border-color;
-  border-radius: 4px;
+  background-color: #ccc;
   cursor: pointer;
-  font-size: 1.1em;
-  padding: 0.2em 0.6em;
-  float: right;
-  margin-top: 0.8em;
+  padding: 0;
+  margin-left: auto;   // đẩy về cuối hàng flex, không dùng float
+  display: flex;
+  align-items: center;
+  transition: background-color 0.25s ease;
+
+  &[aria-pressed="true"] {
+    background-color: #444;
+  }
+
+  .theme-toggle__icon {
+    font-size: 0.7em;
+    width: 26px;
+    text-align: center;
+    z-index: 1;
+    pointer-events: none;
+  }
+
+  .theme-toggle__thumb {
+    position: absolute;
+    top: 2px;
+    left: 2px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #fff;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+    transition: transform 0.25s ease;
+  }
+
+  &[aria-pressed="true"] .theme-toggle__thumb {
+    transform: translateX(26px);
+  }
 }
 
+/* ==== Dark mode: dùng chung biến màu, tránh lệch tông ==== */
 html[data-theme="dark"] {
+  --dm-bg: #1a1a1a;
+  --dm-bg-panel: #1a1a1a;      // dùng CÙNG giá trị với --dm-bg thay vì khác biệt
+  --dm-text: #e0e0e0;
+  --dm-text-muted: #a8a8a8;
+  --dm-border: #333;
+  --dm-link: #7fb3ff;
+
   body,
+  .page,
   .page__content,
-  .toc {
-    background-color: #1b1b1b !important;
-    color: #e0e0e0 !important;
+  .masthead,
+  .masthead__inner-wrap,
+  .sidebar,
+  .sidebar__right,
+  .greedy-nav,
+  .toc,
+  .archive {
+    background-color: var(--dm-bg) !important;
+    color: var(--dm-text) !important;
   }
 
   .masthead,
-  .sidebar {
-    background-color: #141414 !important;
-    border-color: #333 !important;
+  .sidebar,
+  .toc {
+    border-color: var(--dm-border) !important;
   }
 
-  a {
-    color: #7fb3ff !important;
-  }
-
-  .author__name,
-  .author__bio,
+  a,
   .greedy-nav a,
-  .site-title {
-    color: #e0e0e0 !important;
+  .site-title,
+  .author__name,
+  .masthead__menu-item a {
+    color: var(--dm-text) !important;
+  }
+
+  a:hover {
+    color: var(--dm-link) !important;
+  }
+
+  .author__bio,
+  .page__meta,
+  .toc a {
+    color: var(--dm-text-muted) !important;
   }
 }
