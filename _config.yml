@@ -11,9 +11,9 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-title: "ThaoNguyen"
-subtitle: "Full-stack dev sharing technical notes"
-url: "https://thaonbt.github.io"
+# title: "ThaoNguyen"
+# subtitle: "Full-stack dev sharing technical notes"
+# url: "https://thaonbt.github.io"
 
 search: true  # bật icon kính lúp trong masthead
 breadcrumbs: true
