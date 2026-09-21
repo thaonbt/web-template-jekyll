@@ -11,22 +11,25 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-title: "ThaoNguyen"
+title: "Thao Nguyen"
 url: "https://thaonbt.github.io"
 
 breadcrumbs: true
 
 author:
-  name: "ThaoNguyen"
+  name: "Thao Nguyen"
   bio: "Full-stack dev | Fintech & Crypto enthusiast"
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/thaonbt"
 
-logo: /assets/images/favicon.png
+logo: /assets/images/avatar_Thao.
 
 collections:
   projects:
     output: true
     permalink: /:collection/:path/
+
+include:
+  - _pages
