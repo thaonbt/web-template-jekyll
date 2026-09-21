@@ -11,20 +11,24 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-title: "Thao Nguyen"
+title: "ThaoNguyen"
+subtitle: "Full-stack dev sharing technical notes"
 url: "https://thaonbt.github.io"
 
+search: true  # bật icon kính lúp trong masthead
 breadcrumbs: true
 
 author:
   name: "Thao Nguyen"
   bio: "Full-stack dev | Fintech & Crypto enthusiast"
+  avatar: "/assets/images/avatar_Thao.JPG"
+  home: "/about/"   # click vào avatar sẽ dẫn tới trang About
   links:
     - label: "GitHub"
       icon: "fab fa-fw fa-github"
       url: "https://github.com/thaonbt"
 
-logo: /assets/images/avatar_Thao.JPG
+# logo: /assets/images/favicon.png
 
 collections:
   projects:
@@ -33,3 +37,9 @@ collections:
 
 include:
   - _pages
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      author_profile: true
