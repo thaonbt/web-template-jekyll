@@ -1,7 +1,4 @@
----
----
-
-@import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
+--- --- @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
 /* Đồng nhất màu chữ menu, sidebar với content */
@@ -10,151 +7,155 @@
 .author__name,
 .author__bio,
 .author__urls a {
-  color: $text-color !important;
+    color: $text-color !important;
 }
 
 .author__bio {
-  font-size: 1em; // khớp cỡ chữ body content thay vì nhỏ hơn mặc định
+    font-size: 1em; // khớp cỡ chữ body content thay vì nhỏ hơn mặc định
 }
 
 .masthead__menu-item a {
-  font-size: 1em;
-  font-weight: 500;
+    font-size: 1em;
+    font-weight: 500;
 }
 
 /* Style khung "On this page" (TOC) */
 .toc {
-  font-size: 0.85em;
-  border: 1px solid $border-color;
-  border-radius: 6px;
-  background-color: mix($background-color, $text-color, 97%);
+    font-size: 0.85em;
+    border: 1px solid $border-color;
+    border-radius: 6px;
+    background-color: mix($background-color, $text-color, 97%);
 
-  .nav__title {
-    font-size: 0.9em;
-    font-weight: 600;
-    padding: 0.75em 1em;
-  }
-
-  a {
-    color: $muted-text-color;
-
-    &:hover {
-      color: $link-color;
+    .nav__title {
+        font-size: 0.9em;
+        font-weight: 600;
+        padding: 0.75em 1em;
     }
-  }
+
+    a {
+        color: $muted-text-color;
+
+        &:hover {
+            color: $link-color;
+        }
+    }
 }
 
 /* Toggle chuyển đổi chế độ sáng/tối (Dark mode toggle) - tham khảo: https://codepen.io/aaroniker/pen/ExgJQqM */
 #theme-toggle {
-  position: fixed;
-  top: 14px;
-  right: 16px;
-  z-index: 999; // đảm bảo luôn nổi trên mọi lớp khác của theme
+    position: fixed;
+    top: 14px;
+    right: 16px;
+    z-index: 999; // đảm bảo luôn nổi trên mọi lớp khác của theme
 
-  width: 52px;
-  height: 26px;
-  border-radius: 999px;
-  border: 1px solid $border-color;
-  background-color: #ccc;
-  cursor: pointer;
-  padding: 0;
-  display: flex;
-  align-items: center;
-  transition: background-color 0.25s ease;
-  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+    width: 52px;
+    height: 26px;
+    border-radius: 999px;
+    border: 1px solid $border-color;
+    background-color: #ccc;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    transition: background-color 0.25s ease;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
 
-  &[aria-pressed="true"] {
-    background-color: #444;
-  }
+    &[aria-pressed="true"] {
+        background-color: #444;
+    }
 
-  .theme-toggle__icon {
-    font-size: 0.7em;
-    width: 26px;
-    text-align: center;
-    z-index: 1;
-    pointer-events: none;
-  }
+    .theme-toggle__icon {
+        font-size: 0.7em;
+        width: 26px;
+        text-align: center;
+        z-index: 1;
+        pointer-events: none;
+    }
 
-  .theme-toggle__thumb {
-    position: absolute;
-    top: 2px;
-    left: 2px;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background-color: #fff;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
-    transition: transform 0.25s ease;
-  }
+    .theme-toggle__thumb {
+        position: absolute;
+        top: 2px;
+        left: 2px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        background-color: #fff;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+        transition: transform 0.25s ease;
+    }
 
-  &[aria-pressed="true"] .theme-toggle__thumb {
-    transform: translateX(26px);
-  }
+    &[aria-pressed="true"] .theme-toggle__thumb {
+        transform: translateX(26px);
+    }
 }
 
 @media (max-width: 600px) {
-  #theme-toggle {
-    top: 10px;
-    right: 10px;
-  }
+    #theme-toggle {
+        top: 10px;
+        right: 10px;
+    }
 }
 
 /* ==== Dark mode: dùng chung biến màu, tránh lệch tông ==== */
 html[data-theme="dark"] {
-  --dm-bg: #1a1a1a;
-  --dm-bg-panel: #1a1a1a;      // dùng CÙNG giá trị với --dm-bg thay vì khác biệt
-  --dm-text: #e0e0e0;
-  --dm-text-muted: #a8a8a8;
-  --dm-border: #333;
-  --dm-link: #7fb3ff;
+    --dm-bg: #1a1a1a;
+    --dm-bg-footer: #121212; // đậm hơn 1 chút so với body, tạo phân tách rõ
+    --dm-bg-panel: #1a1a1a; // dùng CÙNG giá trị với --dm-bg thay vì khác biệt
+    --dm-text: #e0e0e0;
+    --dm-text-muted: #a8a8a8;
+    --dm-border: #333;
+    --dm-link: #7fb3ff;
 
-  body,
-  .page,
-  .page__content,
-  .masthead,
-  .masthead__inner-wrap,
-  .sidebar,
-  .sidebar__right,
-  .greedy-nav,
-  .toc,
-  .archive {
-    background-color: var(--dm-bg) !important;
-    color: var(--dm-text) !important;
-  }
+    body,
+    .page,
+    .page__content,
+    .masthead,
+    .masthead__inner-wrap,
+    .sidebar,
+    .sidebar__right,
+    .greedy-nav,
+    .toc,
+    .archive {
+        background-color: var(--dm-bg) !important;
+        color: var(--dm-text) !important;
+    }
 
-  .masthead,
-  .sidebar,
-  .toc {
-    border-color: var(--dm-border) !important;
-  }
+    .masthead,
+    .sidebar,
+    .toc {
+        border-color: var(--dm-border) !important;
+    }
 
-  a,
-  .greedy-nav a,
-  .site-title,
-  .author__name,
-  .masthead__menu-item a {
-    color: var(--dm-text) !important;
-  }
+    a,
+    .page__content a {
+        color: var(--dm-link) !important; // link trong content vẫn nổi bật
+    }
 
-  a:hover {
-    color: var(--dm-link) !important;
-  }
+    .greedy-nav a,
+    .site-title,
+    .masthead__menu-item a {
+        color: var(--dm-text-muted) !important; // đổi từ --dm-text sang --dm-text-muted
+    }
 
-  .author__bio,
-  .page__meta,
-  .toc a {
-    color: var(--dm-text-muted) !important;
-  }
+    a:hover {
+        color: var(--dm-link) !important;
+    }
 
-  .page__footer,
-  .page__footer-follow,
-  .page__footer-copyright {
-    background-color: var(--dm-bg) !important;
-    color: var(--dm-text-muted) !important;
-  }
+    .author__bio,
+    .page__meta,
+    .toc a {
+        color: var(--dm-text-muted) !important;
+    }
 
-  .page__footer a,
-  .page__footer-follow a {
-    color: var(--dm-link) !important;
-  }
+    .page__footer,
+    .page__footer-follow,
+    .page__footer-copyright {
+        background-color: var(--dm-bg) !important;
+        color: var(--dm-text-muted) !important;
+    }
+
+    .page__footer a,
+    .page__footer-follow a {
+        color: var(--dm-link) !important;
+    }
 }
