@@ -2,7 +2,7 @@
 title: "Lessons from Setting Up a Jekyll Site on GitHub Pages"
 date: 2026-09-21
 categories:
-  - devops
+  - notes
 tags:
   - jekyll
   - github-pages
