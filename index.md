@@ -1,5 +1,5 @@
 ---
-title: "Portfolio - ThaoNguyen"
+title: "Portfolio"
 excerpt: "A tech-oriented automation and web development"
 layout: home
 header:
