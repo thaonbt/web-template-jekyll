@@ -45,8 +45,17 @@
 }
 
 /* Toggle chuyển đổi chế độ sáng/tối (Dark mode toggle) - tham khảo: https://codepen.io/aaroniker/pen/ExgJQqM */
+.masthead__inner-wrap {
+  position: relative; // đảm bảo làm điểm neo cho absolute bên dưới
+}
+
 #theme-toggle {
-  position: relative;
+  position: absolute;
+  top: 50%;
+  right: 1em;
+  transform: translateY(-50%);
+  margin-left: 0; // bỏ margin-left: auto cũ, không cần nữa
+
   width: 52px;
   height: 26px;
   border-radius: 999px;
@@ -54,7 +63,6 @@
   background-color: #ccc;
   cursor: pointer;
   padding: 0;
-  margin-left: auto;   // đẩy về cuối hàng flex, không dùng float
   display: flex;
   align-items: center;
   transition: background-color 0.25s ease;
@@ -133,5 +141,17 @@ html[data-theme="dark"] {
   .page__meta,
   .toc a {
     color: var(--dm-text-muted) !important;
+  }
+
+  .page__footer,
+  .page__footer-follow,
+  .page__footer-copyright {
+    background-color: var(--dm-bg) !important;
+    color: var(--dm-text-muted) !important;
+  }
+
+  .page__footer a,
+  .page__footer-follow a {
+    color: var(--dm-link) !important;
   }
 }
