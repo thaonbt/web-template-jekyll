@@ -1,4 +1,4 @@
-remote_theme: "mmistakes/minimal-mistakes@4.26.2"
+remote_theme: "mmistakes/minimal-mistakes@4.28.1"
 minimal_mistakes_skin: "dirt"  # hoặc: air, aqua, contrast, dirt, mint, neon, plum, sunset
 # air	Sáng, thoáng, nhiều khoảng trắng — hợp portfolio dev
 # dark	Nền tối, chữ sáng — hợp blog technical
@@ -43,3 +43,6 @@ defaults:
       path: ""
     values:
       author_profile: true
+
+after_footer_scripts:
+  - /assets/js/theme-toggle.js
