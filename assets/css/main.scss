@@ -206,13 +206,14 @@ html[data-theme="dark"] {
   .greedy-nav,
   .toc,
   .sidebar,
-  .sidebar__right {
-    margin-top: 0em; // kéo TOC lên cao hơn
+  .sidebar__right 
+  // {
+  //   margin-top: 0em; // kéo TOC lên cao hơn
 
-    &.sticky {
-      top: 1em; // giảm từ mặc định 2em xuống 1em, ngang gần hơn với title
-    }
-  }
+  //   &.sticky {
+  //     top: 1em; // giảm từ mặc định 2em xuống 1em, ngang gần hơn với title
+  //   }
+  // }
   .archive {
     background-color: var(--dm-bg) !important;
     color: var(--dm-text) !important;
