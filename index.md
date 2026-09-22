@@ -1,7 +1,8 @@
 ---
 title: "Portfolio"
 # excerpt: "A tech-oriented automation and web development"
-layout: splash
+layout: home
+author_profile: false
 header:
   overlay_color: "#000"
   overlay_filter: "0.5"
