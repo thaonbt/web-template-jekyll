@@ -68,13 +68,16 @@
   text-align: right;
 }
 
+.masthead {
+  position: sticky;
+  top: 0;
+  z-index: 15;
+}
+
 /* ==== Light mode: đồng nhất màu header/menu với sidebar (muted, không phải đen) ==== */
 .greedy-nav a,
 .site-title,
 .masthead__menu-item a {
-  position: sticky;
-  top: 0;
-  z-index: 15;
   color: $muted-text-color !important;
 }
 
