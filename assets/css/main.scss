@@ -25,6 +25,7 @@
   justify-content: flex-end;
   gap: 0.5em;
   margin-top: 0.8em;
+  border-top: 0px;
 }
 
 .pagination--pager {            // nút "Previous" và "Next" bài viết
@@ -45,8 +46,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 2em;
-    height: 2em;
+    width: 1em;
+    height: 1em;
     padding: 0;
     margin-left: 0.3em;
     border-radius: 50%;
@@ -58,10 +59,18 @@
   }
 }
 
+.page__share,
+.pagination {
+  border-top: none !important;  // bỏ đường viền trên, tránh trùng với border-top của .page__content
+}
+
 /* ==== Light mode: đồng nhất màu header/menu với sidebar (muted, không phải đen) ==== */
 .greedy-nav a,
 .site-title,
 .masthead__menu-item a {
+  position: sticky;
+  top: 0;
+  z-index: 15;
   color: $muted-text-color !important;
 }
 
