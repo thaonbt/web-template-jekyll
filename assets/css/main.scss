@@ -33,6 +33,10 @@
   z-index: 15;
 }
 
+.masthead__inner-wrap {
+  background-color: $background-color !important;
+}
+
 .greedy-nav a,
 .site-title,
 .masthead__menu-item a {
@@ -42,6 +46,10 @@
 /* ==========================================================================
    3. SIDEBAR (author profile + TOC)
    ========================================================================== */
+
+:root {
+  --header-height: 89px; // THAY bằng số đo thật từ DevTools
+}
 
 .author__bio {
   font-size: 1em;
@@ -72,6 +80,11 @@
   &.sticky {
     top: 1em;
   }
+}
+
+.sidebar.sticky,
+.sidebar__right.sticky {
+  top: calc(var(--header-height) + 1em) !important;
 }
 
 .toc {
