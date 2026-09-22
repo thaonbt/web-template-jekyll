@@ -83,6 +83,22 @@
 
 .author__bio {
   font-size: 1em;
+  border-top: none !important;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  max-width: 100%;
+  hyphens: auto; // tự ngắt từ dài nếu cần, tránh tràn ngang
+}
+
+.author__urls-wrapper button {
+  display: none; // ẩn nút "Follow" toggle
+}
+
+.author__urls {
+  display: block !important; // luôn hiện danh sách link, không cần bấm
+  position: static !important; // bỏ style dropdown popup mặc định
+  box-shadow: none !important;
+  padding: 0;
 }
 
 /* Light mode: selection nhẹ nhàng, không chói */
@@ -187,10 +203,16 @@ html[data-theme="dark"] {
   .page__content,
   .masthead,
   .masthead__inner-wrap,
-  .sidebar,
-  .sidebar__right,
   .greedy-nav,
   .toc,
+  .sidebar,
+  .sidebar__right {
+    margin-top: -1em; // kéo TOC lên cao hơn
+
+    &.sticky {
+      top: 1em; // giảm từ mặc định 2em xuống 1em, ngang gần hơn với title
+    }
+  }
   .archive {
     background-color: var(--dm-bg) !important;
     color: var(--dm-text) !important;
@@ -238,7 +260,6 @@ html[data-theme="dark"] {
     background-color: var(--dm-text) !important;
   }
 
-  .author__bio,
   .page__meta,
   .toc a {
     color: var(--dm-text-muted) !important;
