@@ -207,7 +207,7 @@ html[data-theme="dark"] {
   .toc,
   .sidebar,
   .sidebar__right {
-    margin-top: -1em; // kéo TOC lên cao hơn
+    margin-top: 0em; // kéo TOC lên cao hơn
 
     &.sticky {
       top: 1em; // giảm từ mặc định 2em xuống 1em, ngang gần hơn với title
