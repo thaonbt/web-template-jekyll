@@ -85,6 +85,17 @@
   font-size: 1em;
 }
 
+/* Light mode: selection nhẹ nhàng, không chói */
+::selection {
+  background-color: #b3d4fc;
+  color: #1a1a1a;
+}
+
+::-moz-selection {
+  background-color: #b3d4fc;
+  color: #1a1a1a;
+}
+
 /* ==== Khung "On this page" (TOC) ==== */
 .toc {
   font-size: 0.85em;
@@ -214,20 +225,12 @@ html[data-theme="dark"] {
     border-color: var(--dm-border) !important;
   }
 
-  // .page__content a {
-  //   color: var(--dm-link) !important;
-  // }
-
 // Ngoại lệ: link trong nav/header dùng muted thay vì link-blue
   .greedy-nav a,
   .site-title,
   .masthead__menu-item a {
     color: var(--dm-text-muted) !important;
   }
-
-  // .page__content a:hover {
-  //   color: lighten(#7fb3ff, 10%) !important;
-  // }
 
   .greedy-nav__toggle .navicon,
   .greedy-nav__toggle .navicon:before,
@@ -248,8 +251,13 @@ html[data-theme="dark"] {
     color: var(--dm-text-muted) !important;
   }
 
-  // .page__footer a,
-  // .page__footer-follow a {
-  //   color: var(--dm-link) !important;
-  // }
+  ::selection {
+    background-color: #3a5a80;
+    color: #e0e0e0;
+  }
+
+  ::-moz-selection {
+    background-color: #3a5a80;
+    color: #e0e0e0;
+  }
 }
