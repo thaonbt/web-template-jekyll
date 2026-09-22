@@ -12,7 +12,7 @@ plugins:
   - jekyll-sitemap
 
 title: "Thao Nguyen"
-subtitle: "Notes & Portfolio"
+subtitle: "AI-Augmented Engineer & Fintech Enthusiast"
 url: "https://thaonbt.github.io"
 
 search: true  # bật icon kính lúp trong masthead
@@ -21,9 +21,11 @@ breadcrumbs: false
 author:
   name: "Thao Nguyen"
   # bio: "Full-stack dev | Fintech & Crypto enthusiast"
-  bio: |
-    - AI-Augmented Engineer
-    - QA Automation Engineer
+  bio: >-
+    Experienced _QA Automation Engineer_ turned **AI-Augmented Engineer**. Self-taught Web Developer with Full-stack capabilities. Passionate about _Fintech_, _Digital Assets_, and _Crypto_.
+  # bio: |
+  #   - AI-Augmented Engineer
+  #   - QA Automation Engineer
   avatar: "/assets/images/avatar-Thao.JPG"
   home: "/about/"   # click vào avatar sẽ dẫn tới trang About
   links:
