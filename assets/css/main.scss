@@ -21,10 +21,41 @@
   border-radius: 0;
 }
 
-.pagination--pager {
-  padding: 0.5em 1em;
+.pagination {                   // khung chứa nút "Previous" và "Next" bài viết
+  justify-content: flex-end;
+  gap: 0.5em;
+  margin-top: 0.8em;
+}
+
+.pagination--pager {            // nút "Previous" và "Next" bài viết
+  padding: 0.35em 0.9em;
   font-size: 0.85em;
-  max-width: 200px;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
+.page__share {
+  text-align: right;
+  margin-top: 0.8em;
+  margin-bottom: 0.3em; // giảm khoảng cách xuống pagination bên dưới
+}
+
+.page__share {                  // nút chia sẻ bài viết
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    margin-left: 0.3em;
+    border-radius: 50%;
+    font-size: 0.9em;
+
+    span {
+      display: none; // ẩn chữ, chỉ giữ icon
+    }
+  }
 }
 
 /* ==== Light mode: đồng nhất màu header/menu với sidebar (muted, không phải đen) ==== */
