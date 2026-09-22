@@ -41,8 +41,20 @@ include:
 defaults:
   - scope:
       path: ""
+      type: pages
     values:
+      layout: single
       author_profile: true
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      read_time: true   # hiển thị thời gian đọc bài viết
+      comments: false   # tắt chức năng bình luận
+      share: true       # hiển thị nút chia sẻ bài viết
+      related: true     # hiển thị bài viết liên quan
 
 after_footer_scripts:
   - /assets/js/theme-toggle.js
