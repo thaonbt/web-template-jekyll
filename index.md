@@ -1,5 +1,5 @@
 ---
-title: "Pròile"
+title: "Portfolio"
 excerpt: "A tech-oriented automation and web development"
 layout: home
 author_profile: true
