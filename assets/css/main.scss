@@ -4,6 +4,29 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
+/* Inline code (không phải code block trong ``` ```) */
+.page__content code {
+  background-color: #eef0f2;
+  color: #c7254e;
+  padding: 0.15em 0.4em;
+  border-radius: 4px;
+  font-size: 0.9em;
+}
+
+/* Reset lại cho code BÊN TRONG code block (```), tránh bị ăn style trên */
+.page__content pre code {
+  background-color: transparent;
+  color: inherit;
+  padding: 0;
+  border-radius: 0;
+}
+
+.pagination--pager {
+  padding: 0.5em 1em;
+  font-size: 0.85em;
+  max-width: 200px;
+}
+
 /* ==== Light mode: đồng nhất màu header/menu với sidebar (muted, không phải đen) ==== */
 .greedy-nav a,
 .site-title,
@@ -113,6 +136,20 @@ html[data-theme="dark"] {
   .archive {
     background-color: var(--dm-bg) !important;
     color: var(--dm-text) !important;
+  }
+
+  .page__content code {
+    background-color: #2d2d2d !important;
+    color: #ff9d7a !important;
+  }
+
+  .page__content pre code {
+    background-color: transparent !important;
+    color: var(--dm-text) !important;
+  }
+
+  .page__content pre {
+    background-color: #111 !important;
   }
 
 // Mặc định: MỌI link dùng màu --dm-link

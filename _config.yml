@@ -16,7 +16,7 @@ plugins:
 # url: "https://thaonbt.github.io"
 
 search: true  # bật icon kính lúp trong masthead
-breadcrumbs: true
+breadcrumbs: false
 
 author:
   name: "Thao Nguyen"
