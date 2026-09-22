@@ -11,8 +11,8 @@ plugins:
   - jekyll-feed
   - jekyll-sitemap
 
-title: "thaonbt"
-subtitle: "my sharing technical notes"
+title: "ThaoNBT"
+subtitle: "Personal notes & sharing"
 url: "https://thaonbt.github.io"
 
 search: true  # bật icon kính lúp trong masthead
@@ -20,7 +20,12 @@ breadcrumbs: false
 
 author:
   name: "Thao Nguyen"
-  bio: "Full-stack dev | Fintech & Crypto enthusiast"
+  # bio: "Full-stack dev | Fintech & Crypto enthusiast"
+  bio: |
+    - QA Automation Engineer
+    - AI-Augmented Engineer
+    - Full-stack dev
+    - Fintech & Crypto enthusiast
   avatar: "/assets/images/avatar-Thao.JPG"
   home: "/about/"   # click vào avatar sẽ dẫn tới trang About
   links:
