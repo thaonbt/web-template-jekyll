@@ -52,7 +52,7 @@
 }
 
 .author__bio {
-  font-size: 1em;
+  font-size: 0.8em;
   // text-align: justify;
   word-wrap: break-word;
   overflow-wrap: break-word;
@@ -62,7 +62,7 @@
 
 .author__urls-wrapper {
   border-top: none !important;
-
+  font-size: 0.8em;
   button {
     display: none; // ẩn nút "Follow" toggle
   }
