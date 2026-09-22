@@ -75,11 +75,7 @@
 }
 
 .sidebar__right {
-  margin-top: -124px; // xử lý khoảng cách TOC và page title
-
-  &.sticky {
-    top: 1em;
-  }
+  margin-top: -124px; // xử lý khoảng cách TOC
 }
 
 .sidebar.sticky,
