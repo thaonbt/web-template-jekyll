@@ -46,8 +46,8 @@
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    width: 1em;
-    height: 1em;
+    width: 2em;
+    height: 2em;
     padding: 0;
     margin-left: 0.3em;
     border-radius: 50%;
@@ -62,6 +62,10 @@
 .page__share,
 .pagination {
   border-top: none !important;  // bỏ đường viền trên, tránh trùng với border-top của .page__content
+}
+
+.page__date{
+  text-align: right;
 }
 
 /* ==== Light mode: đồng nhất màu header/menu với sidebar (muted, không phải đen) ==== */
