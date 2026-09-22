@@ -84,8 +84,7 @@
 
 .sidebar.sticky,
 .sidebar__right.sticky {
-  height: calc(100vh - var(--header-height) - 2em);
-  overflow-y: auto;
+  top: calc(var(--header-height) + 1em) !important;
 }
 
 .toc {
