@@ -4,7 +4,10 @@
 @import "minimal-mistakes/skins/{{ site.minimal_mistakes_skin | default: 'default' }}";
 @import "minimal-mistakes";
 
-/* Inline code (không phải code block trong ``` ```) */
+/* ==========================================================================
+   1. TYPOGRAPHY — inline code, code blocks
+   ========================================================================== */
+
 .page__content code {
   background-color: #eef0f2;
   color: #c7254e;
@@ -13,7 +16,6 @@
   font-size: 0.9em;
 }
 
-/* Reset lại cho code BÊN TRONG code block (```), tránh bị ăn style trên */
 .page__content pre code {
   background-color: transparent;
   color: inherit;
@@ -21,52 +23,9 @@
   border-radius: 0;
 }
 
-.pagination {                   // khung chứa nút "Previous" và "Next" bài viết
-  justify-content: flex-end;
-  gap: 0.5em;
-  margin-top: 0.8em;
-  border-top: 0px;
-}
-
-.pagination--pager {            // nút "Previous" và "Next" bài viết
-  padding: 0.35em 0.9em;
-  font-size: 0.85em;
-  border-radius: 4px;
-  line-height: 1.4;
-}
-
-.page__share {
-  text-align: right;
-  margin-top: 0.8em;
-  margin-bottom: 0.3em; // giảm khoảng cách xuống pagination bên dưới
-}
-
-.page__share {                  // nút chia sẻ bài viết
-  .btn {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    width: 2em;
-    height: 2em;
-    padding: 0;
-    margin-left: 0.3em;
-    border-radius: 50%;
-    font-size: 0.9em;
-
-    span {
-      display: none; // ẩn chữ, chỉ giữ icon
-    }
-  }
-}
-
-.page__share,
-.pagination {
-  border-top: none !important;  // bỏ đường viền trên, tránh trùng với border-top của .page__content
-}
-
-.page__date{
-  text-align: right;
-}
+/* ==========================================================================
+   2. HEADER (masthead)
+   ========================================================================== */
 
 .masthead {
   position: sticky;
@@ -74,45 +33,47 @@
   z-index: 15;
 }
 
-/* ==== Light mode: đồng nhất màu header/menu với sidebar (muted, không phải đen) ==== */
 .greedy-nav a,
 .site-title,
 .masthead__menu-item a {
   color: $muted-text-color !important;
 }
 
+/* ==========================================================================
+   3. SIDEBAR (author profile + TOC)
+   ========================================================================== */
+
 .author__bio {
   font-size: 1em;
-  border-top: none !important;
   word-wrap: break-word;
   overflow-wrap: break-word;
   max-width: 100%;
-  hyphens: auto; // tự ngắt từ dài nếu cần, tránh tràn ngang
+  hyphens: auto;
 }
 
-.author__urls-wrapper button {
-  display: none; // ẩn nút "Follow" toggle
+.author__urls-wrapper {
+  border-top: none !important;
+
+  button {
+    display: none; // ẩn nút "Follow" toggle
+  }
 }
 
 .author__urls {
-  display: block !important; // luôn hiện danh sách link, không cần bấm
-  position: static !important; // bỏ style dropdown popup mặc định
+  display: block !important;
+  position: static !important;
   box-shadow: none !important;
   padding: 0;
 }
 
-/* Light mode: selection nhẹ nhàng, không chói */
-::selection {
-  background-color: #b3d4fc;
-  color: #1a1a1a;
+.sidebar__right {
+  margin-top: -1em;
+
+  &.sticky {
+    top: 1em;
+  }
 }
 
-::-moz-selection {
-  background-color: #b3d4fc;
-  color: #1a1a1a;
-}
-
-/* ==== Khung "On this page" (TOC) ==== */
 .toc {
   font-size: 0.85em;
   border: 1px solid $border-color;
@@ -134,7 +95,55 @@
   }
 }
 
-/* ==== Toggle chuyển đổi sáng/tối ==== */
+/* ==========================================================================
+   4. POST FOOTER — date, share buttons, pagination
+   ========================================================================== */
+
+.page__date {
+  text-align: right;
+}
+
+.page__share {
+  text-align: right;
+  margin-top: 0.8em;
+  margin-bottom: 0.3em;
+  border-top: none !important;
+
+  .btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 2em;
+    height: 2em;
+    padding: 0;
+    margin-left: 0.3em;
+    border-radius: 50%;
+    font-size: 0.9em;
+
+    span {
+      display: none;
+    }
+  }
+}
+
+.pagination {
+  justify-content: flex-end;
+  gap: 0.5em;
+  margin-top: 0.8em;
+  border-top: none !important;
+}
+
+.pagination--pager {
+  padding: 0.35em 0.9em;
+  font-size: 0.85em;
+  border-radius: 4px;
+  line-height: 1.4;
+}
+
+/* ==========================================================================
+   5. DARK MODE TOGGLE — button
+   ========================================================================== */
+
 #theme-toggle {
   position: fixed;
   top: 14px;
@@ -184,12 +193,29 @@
 
 @media (max-width: 600px) {
   #theme-toggle {
-    top: 60px; // tránh đè lên hamburger menu
+    top: 60px;
     right: 10px;
   }
 }
 
-/* ==== Dark mode ==== */
+/* ==========================================================================
+   6. TEXT SELECTION — light mode
+   ========================================================================== */
+
+::selection {
+  background-color: #b3d4fc;
+  color: #1a1a1a;
+}
+
+::-moz-selection {
+  background-color: #b3d4fc;
+  color: #1a1a1a;
+}
+
+/* ==========================================================================
+   7. DARK MODE — color overrides only
+   ========================================================================== */
+
 html[data-theme="dark"] {
   --dm-bg: #1a1a1a;
   --dm-bg-footer: #121212;
@@ -198,6 +224,7 @@ html[data-theme="dark"] {
   --dm-border: #333;
   --dm-link: #7fb3ff;
 
+  // --- Backgrounds ---
   body,
   .page,
   .page__content,
@@ -206,19 +233,19 @@ html[data-theme="dark"] {
   .greedy-nav,
   .toc,
   .sidebar,
-  .sidebar__right 
-  // {
-  //   margin-top: 0em; // kéo TOC lên cao hơn
-
-  //   &.sticky {
-  //     top: 1em; // giảm từ mặc định 2em xuống 1em, ngang gần hơn với title
-  //   }
-  // }
+  .sidebar__right,
   .archive {
     background-color: var(--dm-bg) !important;
     color: var(--dm-text) !important;
   }
 
+  .masthead,
+  .sidebar,
+  .toc {
+    border-color: var(--dm-border) !important;
+  }
+
+  // --- Code blocks ---
   .page__content code {
     background-color: #2d2d2d !important;
     color: #ff9d7a !important;
@@ -233,7 +260,7 @@ html[data-theme="dark"] {
     background-color: #111 !important;
   }
 
-// Mặc định: MỌI link dùng màu --dm-link
+  // --- Links ---
   a {
     color: var(--dm-link) !important;
   }
@@ -242,30 +269,26 @@ html[data-theme="dark"] {
     color: lighten(#7fb3ff, 10%) !important;
   }
 
-  .masthead,
-  .sidebar,
-  .toc {
-    border-color: var(--dm-border) !important;
-  }
-
-// Ngoại lệ: link trong nav/header dùng muted thay vì link-blue
   .greedy-nav a,
   .site-title,
   .masthead__menu-item a {
     color: var(--dm-text-muted) !important;
   }
 
+  // --- Header hamburger icon ---
   .greedy-nav__toggle .navicon,
   .greedy-nav__toggle .navicon:before,
   .greedy-nav__toggle .navicon:after {
     background-color: var(--dm-text) !important;
   }
 
+  // --- Muted text ---
   .page__meta,
   .toc a {
     color: var(--dm-text-muted) !important;
   }
 
+  // --- Footer ---
   .page__footer,
   .page__footer-follow,
   .page__footer-copyright {
@@ -273,6 +296,7 @@ html[data-theme="dark"] {
     color: var(--dm-text-muted) !important;
   }
 
+  // --- Text selection ---
   ::selection {
     background-color: #3a5a80;
     color: #e0e0e0;
