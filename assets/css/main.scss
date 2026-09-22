@@ -75,16 +75,21 @@
 }
 
 .sidebar__right {
-  margin-top: -1em;
+  margin-top: -124px; // xử lý khoảng cách TOC và page title
 
   &.sticky {
     top: 1em;
   }
 }
 
-.sidebar.sticky,
+.sidebar.sticky {
+  height: calc(100vh - var(--header-height) - 2em);
+  overflow-y: auto;
+}
+
 .sidebar__right.sticky {
-  top: calc(var(--header-height) + 1em) !important;
+  height: calc(100vh - var(--header-height) - 2em);
+  overflow-y: auto;
 }
 
 .toc {
