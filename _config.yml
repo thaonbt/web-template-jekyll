@@ -31,7 +31,7 @@ author:
       icon: "fab fa-fw fa-github"
       url: "https://thaonbt.github.io/"
 
-logo: /assets/images/favicon.ico
+logo: /assets/images/avatar.png
 
 collections:
   projects:
