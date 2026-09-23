@@ -1,8 +1,8 @@
 ---
-title: "Worldquant Quantitative Proficiency Test "
-excerpt: "Preparation for the QPT"
+title: "PROJECT 1"
+excerpt: "Describe about Project 1"
 header:
-  teaser: /assets/images/project-1-thumb-worldquant.jpg
+  teaser: /assets/images/project-1-thumb.png
 ---
 
-My personal stuffs for the test.
+Start writting amazing things here

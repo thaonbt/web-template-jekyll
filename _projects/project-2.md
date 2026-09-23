@@ -1,8 +1,8 @@
 ---
-title: "Master of Science in Finance Engineering"
-excerpt: "Online MScFE course from World Quant"
+title: "PROJECT 2"
+excerpt: "Describe about Project 2"
 header:
-  teaser: /assets/images/project-2-thumb-mscfe.jpg
+  teaser: /assets/images/project-2-thumb.png
 ---
 
-My personal notes during the course.
+Start writting amazing things here

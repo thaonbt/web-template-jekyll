@@ -1,6 +1,6 @@
 ---
 title: "Portfolio"
-excerpt: "A tech-oriented automation and web development"
+excerpt: "A place to share your stuff"
 layout: home
 author_profile: true
 header:
